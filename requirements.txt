@@ -1,0 +1,6 @@
+# ── Core dependencies ─────────────────────────────────────────────────────────
+requests>=2.31.0      # HTTP client for REST API calls
+urllib3>=2.0.0        # Used by requests for connection pooling and retries
+
+# ── Optional (recommended) ────────────────────────────────────────────────────
+python-dotenv>=1.0.0  # Load credentials from a .env file (avoids exporting env vars manually)

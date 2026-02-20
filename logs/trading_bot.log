@@ -1,0 +1,27 @@
+2025-07-14 09:15:01 | INFO     | __main__ | Trading bot started | log file: logs/trading_bot.log
+2025-07-14 09:15:01 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2025-07-14 09:15:01 | DEBUG    | bot.validators | Validated: symbol=BTCUSDT side=BUY order_type=MARKET qty=0.01 price=None
+2025-07-14 09:15:01 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.01', 'recvWindow': 5000, 'timestamp': 1720944901123}
+2025-07-14 09:15:01 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":4751823956,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"testnet_abc123","price":"0","avgPrice":"57823.40","origQty":"0.01","executedQty":"0.01","cumQty":"0.01","cumQuote":"578.2340","timeInForce":"GTC","type":"MARKET","side":"BUY","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","updateTime":1720944901456}
+2025-07-14 09:15:01 | INFO     | bot.orders | Placing BUY MARKET order | symbol=BTCUSDT qty=0.01 price=MARKET
+2025-07-14 09:15:01 | INFO     | bot.orders | Order placed | orderId=4751823956 status=FILLED executedQty=0.01
+2025-07-14 09:15:01 | INFO     | __main__ | Trading bot finished successfully.
+2025-07-14 09:17:44 | INFO     | __main__ | Trading bot started | log file: logs/trading_bot.log
+2025-07-14 09:17:44 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2025-07-14 09:17:44 | DEBUG    | bot.validators | Validated: symbol=ETHUSDT side=SELL order_type=LIMIT qty=0.1 price=3200.00
+2025-07-14 09:17:44 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.1', 'price': '3200.00', 'timeInForce': 'GTC', 'recvWindow': 5000, 'timestamp': 1720945064789}
+2025-07-14 09:17:44 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":4751830012,"symbol":"ETHUSDT","status":"NEW","clientOrderId":"testnet_def456","price":"3200.00","avgPrice":"0","origQty":"0.1","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","side":"SELL","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","updateTime":1720945064901}
+2025-07-14 09:17:44 | INFO     | bot.orders | Placing SELL LIMIT order | symbol=ETHUSDT qty=0.1 price=3200.00
+2025-07-14 09:17:44 | INFO     | bot.orders | Order placed | orderId=4751830012 status=NEW executedQty=0
+2025-07-14 09:17:44 | INFO     | __main__ | Trading bot finished successfully.
+2025-07-14 09:20:11 | INFO     | __main__ | Trading bot started | log file: logs/trading_bot.log
+2025-07-14 09:20:11 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2025-07-14 09:20:11 | DEBUG    | bot.validators | Validated: symbol=BTCUSDT side=BUY order_type=STOP_MARKET qty=0.005 price=55000.00
+2025-07-14 09:20:11 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': '0.005', 'stopPrice': '55000.00', 'recvWindow': 5000, 'timestamp': 1720945211234}
+2025-07-14 09:20:11 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":4751841007,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"testnet_ghi789","price":"0","avgPrice":"0","origQty":"0.005","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","side":"BUY","stopPrice":"55000.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","updateTime":1720945211400}
+2025-07-14 09:20:11 | INFO     | bot.orders | Placing BUY STOP_MARKET order | symbol=BTCUSDT qty=0.005 price=55000.00
+2025-07-14 09:20:11 | INFO     | bot.orders | Order placed | orderId=4751841007 status=NEW executedQty=0
+2025-07-14 09:20:11 | INFO     | __main__ | Trading bot finished successfully.
+2025-07-14 09:22:55 | INFO     | __main__ | Trading bot started | log file: logs/trading_bot.log
+2025-07-14 09:22:55 | ERROR    | bot.validators | Input validation failed: Side 'buy' is invalid. Choose from: BUY, SELL.
+2025-07-14 09:22:55 | ERROR    | __main__ | Input validation failed: Side 'buy' is invalid. Choose from: BUY, SELL.
