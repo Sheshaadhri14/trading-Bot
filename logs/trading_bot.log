@@ -1,27 +1,136 @@
-2025-07-14 09:15:01 | INFO     | __main__ | Trading bot started | log file: logs/trading_bot.log
-2025-07-14 09:15:01 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
-2025-07-14 09:15:01 | DEBUG    | bot.validators | Validated: symbol=BTCUSDT side=BUY order_type=MARKET qty=0.01 price=None
-2025-07-14 09:15:01 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.01', 'recvWindow': 5000, 'timestamp': 1720944901123}
-2025-07-14 09:15:01 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":4751823956,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"testnet_abc123","price":"0","avgPrice":"57823.40","origQty":"0.01","executedQty":"0.01","cumQty":"0.01","cumQuote":"578.2340","timeInForce":"GTC","type":"MARKET","side":"BUY","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","updateTime":1720944901456}
-2025-07-14 09:15:01 | INFO     | bot.orders | Placing BUY MARKET order | symbol=BTCUSDT qty=0.01 price=MARKET
-2025-07-14 09:15:01 | INFO     | bot.orders | Order placed | orderId=4751823956 status=FILLED executedQty=0.01
-2025-07-14 09:15:01 | INFO     | __main__ | Trading bot finished successfully.
-2025-07-14 09:17:44 | INFO     | __main__ | Trading bot started | log file: logs/trading_bot.log
-2025-07-14 09:17:44 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
-2025-07-14 09:17:44 | DEBUG    | bot.validators | Validated: symbol=ETHUSDT side=SELL order_type=LIMIT qty=0.1 price=3200.00
-2025-07-14 09:17:44 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.1', 'price': '3200.00', 'timeInForce': 'GTC', 'recvWindow': 5000, 'timestamp': 1720945064789}
-2025-07-14 09:17:44 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":4751830012,"symbol":"ETHUSDT","status":"NEW","clientOrderId":"testnet_def456","price":"3200.00","avgPrice":"0","origQty":"0.1","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","side":"SELL","stopPrice":"0","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","updateTime":1720945064901}
-2025-07-14 09:17:44 | INFO     | bot.orders | Placing SELL LIMIT order | symbol=ETHUSDT qty=0.1 price=3200.00
-2025-07-14 09:17:44 | INFO     | bot.orders | Order placed | orderId=4751830012 status=NEW executedQty=0
-2025-07-14 09:17:44 | INFO     | __main__ | Trading bot finished successfully.
-2025-07-14 09:20:11 | INFO     | __main__ | Trading bot started | log file: logs/trading_bot.log
-2025-07-14 09:20:11 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
-2025-07-14 09:20:11 | DEBUG    | bot.validators | Validated: symbol=BTCUSDT side=BUY order_type=STOP_MARKET qty=0.005 price=55000.00
-2025-07-14 09:20:11 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': '0.005', 'stopPrice': '55000.00', 'recvWindow': 5000, 'timestamp': 1720945211234}
-2025-07-14 09:20:11 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":4751841007,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"testnet_ghi789","price":"0","avgPrice":"0","origQty":"0.005","executedQty":"0","cumQty":"0","cumQuote":"0","timeInForce":"GTC","type":"STOP_MARKET","side":"BUY","stopPrice":"55000.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","updateTime":1720945211400}
-2025-07-14 09:20:11 | INFO     | bot.orders | Placing BUY STOP_MARKET order | symbol=BTCUSDT qty=0.005 price=55000.00
-2025-07-14 09:20:11 | INFO     | bot.orders | Order placed | orderId=4751841007 status=NEW executedQty=0
-2025-07-14 09:20:11 | INFO     | __main__ | Trading bot finished successfully.
-2025-07-14 09:22:55 | INFO     | __main__ | Trading bot started | log file: logs/trading_bot.log
-2025-07-14 09:22:55 | ERROR    | bot.validators | Input validation failed: Side 'buy' is invalid. Choose from: BUY, SELL.
-2025-07-14 09:22:55 | ERROR    | __main__ | Input validation failed: Side 'buy' is invalid. Choose from: BUY, SELL.
+
+2026-02-20 20:23:17 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:23:17 | DEBUG    | __main__ | Validated inputs: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': Decimal('0.01'), 'price': None}
+2026-02-20 20:23:17 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:23:17 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:23:18 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:23:18 | INFO     | __main__ | Connectivity OK | server time ms=1771599204734
+2026-02-20 20:23:18 | INFO     | bot.orders | Placing BUY MARKET order | symbol=BTCUSDT qty=0.01 price=MARKET
+2026-02-20 20:23:18 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.01', 'recvWindow': 5000, 'timestamp': 1771599198281}
+2026-02-20 20:23:18 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.01&recvWindow=5000&timestamp=1771599198281&signature=d2152af9a7aff9f297c76298764877c6cd03a44bc7c4694f574da34fdfbef5d5 HTTP/1.1" 400 79
+2026-02-20 20:23:18 | DEBUG    | bot.client | Response HTTP 400 | body={"code":-1021,"msg":"Timestamp for this request is outside of the recvWindow."}
+2026-02-20 20:23:18 | ERROR    | bot.client | API error -1021: Timestamp for this request is outside of the recvWindow.
+2026-02-20 20:23:18 | ERROR    | __main__ | Binance API error -1021: Timestamp for this request is outside of the recvWindow.
+2026-02-20 20:31:27 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:31:27 | DEBUG    | __main__ | Validated inputs: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': Decimal('0.01'), 'price': None}
+2026-02-20 20:31:27 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:31:27 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:31:27 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:31:27 | INFO     | __main__ | Connectivity OK | server time ms=1771599693939
+2026-02-20 20:31:27 | INFO     | bot.orders | Placing BUY MARKET order | symbol=BTCUSDT qty=0.01 price=MARKET
+2026-02-20 20:31:27 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:31:27 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.01', 'timestamp': 1771599694245, 'recvWindow': 10000}
+2026-02-20 20:31:28 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.01&timestamp=1771599694245&recvWindow=10000&signature=c56d87a78782d299a85c8f0d2abf376b1ea7c3cf50298101fe8b0b4a6f196b11 HTTP/1.1" 200 None
+2026-02-20 20:31:28 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":12418704755,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"RXjwUYtN9215YOP2CTsbfi","price":"0.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1771599694564}
+2026-02-20 20:31:28 | INFO     | bot.orders | Order placed | orderId=12418704755 status=NEW executedQty=0.000
+2026-02-20 20:31:28 | INFO     | __main__ | Trading bot finished successfully.
+2026-02-20 20:32:03 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:32:03 | DEBUG    | __main__ | Validated inputs: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': Decimal('0.01'), 'price': None}
+2026-02-20 20:32:03 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:32:03 | INFO     | bot.orders | Placing BUY MARKET order | symbol=BTCUSDT qty=0.01 price=MARKET
+2026-02-20 20:32:03 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:32:03 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:32:03 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.01', 'timestamp': 1771599730211, 'recvWindow': 10000}
+2026-02-20 20:32:03 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.01&timestamp=1771599730211&recvWindow=10000&signature=2c03fbda6da448b97b879a9746f19f007d3d63cd432fb742163c135aff9c8830 HTTP/1.1" 200 None
+2026-02-20 20:32:03 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":12418714720,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"CX3Q039FYZNeGZhFdzAviM","price":"0.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1771599730340}
+2026-02-20 20:32:03 | INFO     | bot.orders | Order placed | orderId=12418714720 status=NEW executedQty=0.000
+2026-02-20 20:32:03 | INFO     | __main__ | Trading bot finished successfully.
+2026-02-20 20:32:18 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:32:18 | DEBUG    | __main__ | Validated inputs: {'symbol': 'ETHUSDT', 'side': 'SELL', 'order_type': 'MARKET', 'quantity': Decimal('0.1'), 'price': None}
+2026-02-20 20:32:18 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:32:18 | INFO     | bot.orders | Placing SELL MARKET order | symbol=ETHUSDT qty=0.1 price=MARKET
+2026-02-20 20:32:18 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:32:18 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:32:18 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'MARKET', 'quantity': '0.1', 'timestamp': 1771599745373, 'recvWindow': 10000}
+2026-02-20 20:32:19 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=ETHUSDT&side=SELL&type=MARKET&quantity=0.1&timestamp=1771599745373&recvWindow=10000&signature=24736ea93b8969d6909fb2b5ff9acf7596fbb91464a2006a6ad67b939bfd01f6 HTTP/1.1" 200 None
+2026-02-20 20:32:19 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":8376499773,"symbol":"ETHUSDT","status":"NEW","clientOrderId":"xKlIIdwmdMYQG71T6pGD1t","price":"0.00","avgPrice":"0.00","origQty":"0.100","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1771599745699}
+2026-02-20 20:32:19 | INFO     | bot.orders | Order placed | orderId=8376499773 status=NEW executedQty=0.000
+2026-02-20 20:32:19 | INFO     | __main__ | Trading bot finished successfully.
+2026-02-20 20:32:37 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:32:37 | DEBUG    | __main__ | Validated inputs: {'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'LIMIT', 'quantity': Decimal('0.01'), 'price': Decimal('65000')}
+2026-02-20 20:32:37 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:32:37 | INFO     | bot.orders | Placing SELL LIMIT order | symbol=BTCUSDT qty=0.01 price=65000
+2026-02-20 20:32:37 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:32:37 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:32:37 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.01', 'price': '65000', 'timeInForce': 'GTC', 'timestamp': 1771599764093, 'recvWindow': 10000}
+2026-02-20 20:32:37 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=BTCUSDT&side=SELL&type=LIMIT&quantity=0.01&price=65000&timeInForce=GTC&timestamp=1771599764093&recvWindow=10000&signature=d6a014ae5b99715198a12e345c9810781e9b2782aa61b026ae1c922ee687eeaa HTTP/1.1" 200 None
+2026-02-20 20:32:37 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":12418724176,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"m8T8G3eFvsD6i3eUHeJjcC","price":"65000.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1771599764217}
+2026-02-20 20:32:37 | INFO     | bot.orders | Order placed | orderId=12418724176 status=NEW executedQty=0.000
+2026-02-20 20:32:37 | INFO     | __main__ | Trading bot finished successfully.
+2026-02-20 20:35:12 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:35:12 | DEBUG    | __main__ | Validated inputs: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'STOP_MARKET', 'quantity': Decimal('0.01'), 'price': Decimal('60000')}
+2026-02-20 20:35:12 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:35:12 | INFO     | bot.orders | Placing BUY STOP_MARKET order | symbol=BTCUSDT qty=0.01 price=60000
+2026-02-20 20:35:12 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:35:12 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:35:12 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP_MARKET', 'quantity': '0.01', 'stopPrice': '60000', 'timestamp': 1771599918953, 'recvWindow': 10000}
+2026-02-20 20:35:12 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=BTCUSDT&side=BUY&type=STOP_MARKET&quantity=0.01&stopPrice=60000&timestamp=1771599918953&recvWindow=10000&signature=fdc603bf445d7f3f922cd8dee67d8ede33ec3b29236cfdd90e1e3cf33feb192b HTTP/1.1" 400 55
+2026-02-20 20:35:12 | DEBUG    | bot.client | Response HTTP 400 | body={"code":-2021,"msg":"Order would immediately trigger."}
+2026-02-20 20:35:12 | ERROR    | bot.client | API error -2021: Order would immediately trigger.
+2026-02-20 20:35:12 | ERROR    | __main__ | Binance API error -2021: Order would immediately trigger.
+2026-02-20 20:35:45 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:35:45 | DEBUG    | __main__ | Validated inputs: {'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'STOP_MARKET', 'quantity': Decimal('0.01'), 'price': Decimal('55000')}
+2026-02-20 20:35:45 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:35:45 | INFO     | bot.orders | Placing SELL STOP_MARKET order | symbol=BTCUSDT qty=0.01 price=55000
+2026-02-20 20:35:45 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:35:46 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:35:46 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'STOP_MARKET', 'quantity': '0.01', 'stopPrice': '55000', 'timestamp': 1771599952568, 'recvWindow': 10000}
+2026-02-20 20:35:46 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=BTCUSDT&side=SELL&type=STOP_MARKET&quantity=0.01&stopPrice=55000&timestamp=1771599952568&recvWindow=10000&signature=3cdaad8b123cd2b78aa3201b72461991a377a7d6f8dc7cd501340ef733fb1a5d HTTP/1.1" 200 None
+2026-02-20 20:35:46 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":12418779634,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"548Jv08Kmzrg9m1FK4XEGJ","price":"0.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"STOP_MARKET","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"55000.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"STOP_MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1771599952903}
+2026-02-20 20:35:46 | INFO     | bot.orders | Order placed | orderId=12418779634 status=NEW executedQty=0.000
+2026-02-20 20:35:46 | INFO     | __main__ | Trading bot finished successfully.
+2026-02-20 20:35:54 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:35:54 | DEBUG    | __main__ | Validated inputs: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': Decimal('0.01'), 'price': None}
+2026-02-20 20:35:54 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:35:54 | INFO     | bot.orders | Placing BUY MARKET order | symbol=BTCUSDT qty=0.01 price=MARKET
+2026-02-20 20:35:54 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:35:54 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:35:54 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.01', 'timestamp': 1771599961139, 'recvWindow': 10000}
+2026-02-20 20:35:54 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.01&timestamp=1771599961139&recvWindow=10000&signature=b18cce712e507d4213c3ab0e8d424dd58bdd3d44c7d24ce8ac31ccb2bdbd1b03 HTTP/1.1" 200 None
+2026-02-20 20:35:54 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":12418782492,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"grPFGsiWGN3DS0txd5A3ac","price":"0.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1771599961267}
+2026-02-20 20:35:54 | INFO     | bot.orders | Order placed | orderId=12418782492 status=NEW executedQty=0.000
+2026-02-20 20:35:54 | INFO     | __main__ | Trading bot finished successfully.
+2026-02-20 20:45:09 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:45:09 | DEBUG    | __main__ | Validated inputs: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'MARKET', 'quantity': Decimal('0.01'), 'price': None}
+2026-02-20 20:45:09 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:45:09 | INFO     | bot.orders | Placing BUY MARKET order | symbol=BTCUSDT qty=0.01 price=MARKET
+2026-02-20 20:45:09 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:45:10 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:45:10 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': '0.01', 'timestamp': 1771600516757, 'recvWindow': 10000}
+2026-02-20 20:45:10 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.01&timestamp=1771600516757&recvWindow=10000&signature=251309f1ce1400668678d464d1dacb25edc866bd3e4741fd5904364be81c7ada HTTP/1.1" 200 None
+2026-02-20 20:45:10 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":12418942962,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"hOoiRicWDpPBFQjj6zzR5J","price":"0.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1771600516868}
+2026-02-20 20:45:10 | INFO     | bot.orders | Order placed | orderId=12418942962 status=NEW executedQty=0.000
+2026-02-20 20:45:10 | INFO     | __main__ | Trading bot finished successfully.
+2026-02-20 20:45:10 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:45:10 | DEBUG    | __main__ | Validated inputs: {'symbol': 'BTCUSDT', 'side': 'SELL', 'order_type': 'LIMIT', 'quantity': Decimal('0.01'), 'price': Decimal('120000')}
+2026-02-20 20:45:10 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:45:10 | INFO     | bot.orders | Placing SELL LIMIT order | symbol=BTCUSDT qty=0.01 price=120000
+2026-02-20 20:45:10 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:45:11 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:45:11 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': '0.01', 'price': '120000', 'timeInForce': 'GTC', 'timestamp': 1771600517442, 'recvWindow': 10000}
+2026-02-20 20:45:11 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=BTCUSDT&side=SELL&type=LIMIT&quantity=0.01&price=120000&timeInForce=GTC&timestamp=1771600517442&recvWindow=10000&signature=c219f0b199a871d389c5115f3cd7da5edeab04fab2381a12d563594d422c5cdb HTTP/1.1" 200 None
+2026-02-20 20:45:11 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":12418943280,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"QebzFSkZuo835YthJ1QtB6","price":"120000.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"SELL","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1771600517567}
+2026-02-20 20:45:11 | INFO     | bot.orders | Order placed | orderId=12418943280 status=NEW executedQty=0.000
+2026-02-20 20:45:11 | INFO     | __main__ | Trading bot finished successfully.
+2026-02-20 20:45:11 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:45:11 | DEBUG    | __main__ | Validated inputs: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'LIMIT', 'quantity': Decimal('0.01'), 'price': Decimal('80000')}
+2026-02-20 20:45:11 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:45:11 | INFO     | bot.orders | Placing BUY LIMIT order | symbol=BTCUSDT qty=0.01 price=80000
+2026-02-20 20:45:11 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:45:11 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:45:11 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': '0.01', 'price': '80000', 'timeInForce': 'GTC', 'timestamp': 1771600517977, 'recvWindow': 10000}
+2026-02-20 20:45:11 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=BTCUSDT&side=BUY&type=LIMIT&quantity=0.01&price=80000&timeInForce=GTC&timestamp=1771600517977&recvWindow=10000&signature=c517ec0004648f4cbfeef0806956631f8ee7d1e62713c270c9b7061e587b627b HTTP/1.1" 400 65
+2026-02-20 20:45:11 | DEBUG    | bot.client | Response HTTP 400 | body={"code":-4016,"msg":"Limit price can't be higher than 70228.00."}
+2026-02-20 20:45:11 | ERROR    | bot.client | API error -4016: Limit price can't be higher than 70228.00.
+2026-02-20 20:45:11 | ERROR    | __main__ | Binance API error -4016: Limit price can't be higher than 70228.00.
+2026-02-20 20:59:10 | INFO     | __main__ | Trading bot started | log file: C:\Users\SHESHAADHRI\OneDrive\Desktop\PROJECTS\trading_bot\logs\trading_bot.log
+2026-02-20 20:59:10 | DEBUG    | __main__ | Validated inputs: {'symbol': 'BTCUSDT', 'side': 'BUY', 'order_type': 'LIMIT', 'quantity': Decimal('0.01'), 'price': Decimal('65000')}
+2026-02-20 20:59:10 | DEBUG    | bot.client | BinanceFuturesClient initialised (testnet=https://testnet.binancefuture.com)
+2026-02-20 20:59:10 | INFO     | bot.orders | Placing BUY LIMIT order | symbol=BTCUSDT qty=0.01 price=65000
+2026-02-20 20:59:10 | DEBUG    | urllib3.connectionpool | Starting new HTTPS connection (1): testnet.binancefuture.com:443
+2026-02-20 20:59:10 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "GET /fapi/v1/time HTTP/1.1" 200 28
+2026-02-20 20:59:10 | DEBUG    | bot.client | POST /fapi/v1/order | params={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': '0.01', 'price': '65000', 'timeInForce': 'GTC', 'timestamp': 1771601357301, 'recvWindow': 10000}
+2026-02-20 20:59:11 | DEBUG    | urllib3.connectionpool | https://testnet.binancefuture.com:443 "POST /fapi/v1/order?symbol=BTCUSDT&side=BUY&type=LIMIT&quantity=0.01&price=65000&timeInForce=GTC&timestamp=1771601357301&recvWindow=10000&signature=662bdeca89f9497583c97eb9d0bf96617eb1a8435cf28599d7ee372e0eb60bff HTTP/1.1" 200 None
+2026-02-20 20:59:11 | DEBUG    | bot.client | Response HTTP 200 | body={"orderId":12419186324,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"i7X1egab9jVeAM3xGNOhSc","price":"65000.00","avgPrice":"0.00","origQty":"0.010","executedQty":"0.000","cumQty":"0.000","cumQuote":"0.00000","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"LIMIT","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updateTime":1771601357459}
+2026-02-20 20:59:11 | INFO     | bot.orders | Order placed | orderId=12419186324 status=NEW executedQty=0.000
+2026-02-20 20:59:11 | INFO     | __main__ | Trading bot finished successfully.
